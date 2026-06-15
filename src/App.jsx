@@ -7,6 +7,7 @@ const About = lazy(() => import("./components/About/About"))
 const Services = lazy(() => import("./components/Services/Services"))
 const Gallery = lazy(() => import("./components/Gallery/Gallery"))
 const Contact = lazy(() => import("./components/Contact/Contact"))
+const NotFound = lazy(() => import("./components/NotFound/NotFound"))
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<Contact />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   )
