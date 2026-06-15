@@ -1,0 +1,58 @@
+.skeleton-wrapper {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skeleton-box {
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skeleton-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(to right, transparent 0%, #f0f0f0 50%, transparent 100%);
+  animation: load 1.5s infinite cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.title-skeleton {
+  height: 40px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.text-skeleton {
+  height: 20px;
+  width: 100%;
+}
+
+.text-skeleton.short {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.image-skeleton {
+  height: 250px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+@keyframes load {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}
